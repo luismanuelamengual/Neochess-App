@@ -26,8 +26,7 @@ export default function Page() {
           <span>
             You are not signed in
           </span>
-          <button onClick={() => signIn("google")}>Sign in (Google)</button>
-          <button onClick={() => signIn("github")}>Sign in (GitHub)</button>
+          <button onClick={() => signIn()}>Sign in</button>
         </>
       )}
     </div>
