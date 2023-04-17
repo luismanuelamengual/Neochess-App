@@ -16,7 +16,7 @@ export default function Page() {
           <span>
             <small>Signed in as</small>
             <br />
-            <strong>{session.user.email ?? session.user.name}</strong>
+            <strong>{session.user.name ?? session.user.email}</strong>
           </span>
           <button onClick={() => signOut()}>Sign out</button>
         </>
