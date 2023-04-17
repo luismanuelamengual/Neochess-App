@@ -1,5 +1,5 @@
 'use client';
-import { signIn, signOut, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 export default function Page() {
   const { data: session } = useSession();
@@ -20,7 +20,7 @@ export default function Page() {
           </span>
           <button onClick={() => signOut()}>Sign out</button>
         </>
-        
+
       ) : (
         <>
           <span>
@@ -30,5 +30,5 @@ export default function Page() {
         </>
       )}
     </div>
-  )
+  );
 }
