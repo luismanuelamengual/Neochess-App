@@ -17,5 +17,7 @@
   "javascript.preferences.importModuleSpecifier": "non-relative",
   "beautify.options": {
     "end_with_newline": true
-  }
+  },
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true
 }

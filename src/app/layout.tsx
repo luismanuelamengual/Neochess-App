@@ -1,4 +1,5 @@
 import { NextAuthProvider } from './providers';
+import './styles.scss';
 
 export const metadata = {
   title: 'Create Next App',
