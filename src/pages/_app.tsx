@@ -1,4 +1,5 @@
 import { AppBar, Loading } from '@components';
+import { Box } from '@mui/material';
 import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
 import { useEffect, useState } from 'react';
@@ -14,7 +15,23 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return loading ? <Loading /> :
     <SessionProvider session={pageProps.session}>
-      <AppBar></AppBar>
-      <Component {...pageProps} />
+      <Box sx={{
+        position: 'absolute',
+        display: 'flex',
+        flexDirection: 'column',
+        overflow: 'hidden',
+        top: '0',
+        left: '0',
+        width: '100%',
+        height: '100%'
+      }}>
+        <AppBar></AppBar>
+        <Box sx={{
+          flex: '1',
+          overflow: 'auto',
+        }}>
+          <Component {...pageProps} />
+        </Box>
+      </Box>
     </SessionProvider>;
 }
