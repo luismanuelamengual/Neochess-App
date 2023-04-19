@@ -1,6 +1,11 @@
-export function ChessBoard() {
+interface ChessBoardProps {
+  className?: string;
+}
 
+export function ChessBoard( { className }: ChessBoardProps ) {
   return (
-    <neochess-board></neochess-board>
+    <neochess-board
+      class={className}>
+    </neochess-board>
   );
 }

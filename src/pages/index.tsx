@@ -1,8 +1,11 @@
 import { ChessBoard } from '@components';
+import styles from './index.module.scss';
 
 export default function Page() {
 
   return (
-    <ChessBoard></ChessBoard>
+    <div className={styles.page}>
+      <ChessBoard className={styles.chessboard}></ChessBoard>
+    </div>
   );
 }
